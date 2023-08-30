@@ -26,7 +26,7 @@ public class ItmeController : MonoBehaviour
     void Update()
     {
         // フレームごとに等速で通過させる
-        transform.Translate(0, -0.01f, 0);
+        transform.Translate(0, -0.005f, 0);
 
         // 当たり判定
         Vector2 p1 = transform.position;                    // アイテムの中心座標
