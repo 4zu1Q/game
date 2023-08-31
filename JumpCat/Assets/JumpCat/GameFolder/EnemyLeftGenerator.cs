@@ -21,11 +21,11 @@ public class EnemyLeftGenerator : MonoBehaviour
 
         if (ItmeController.itemCount == 0)
         {
-            span = 0.8f;
+            span = 2.0f;
         }
         else
         {
-            span = 5.0f;
+            span = 8.0f;
         }
 
         if (this.delta > this.span)

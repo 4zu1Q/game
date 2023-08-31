@@ -21,11 +21,11 @@ public class EnemyControllerLeft : MonoBehaviour
         if (ItmeController.itemCount == 0)
         {
             // ƒtƒŒ[ƒ€‚²‚Æ‚É“™‘¬‚Å’Ê‰ß‚³‚¹‚é
-            transform.Translate(0.01f, 0, 0);
+            transform.Translate(0.05f, 0, 0);
         }
         else
         {
-            transform.Translate(0.001f, 0, 0);
+            transform.Translate(0.01f, 0, 0);
         }
 
 
