@@ -15,7 +15,7 @@ public class CatController : MonoBehaviour
     int jumpCount = 0;          // ジャンプ回数
     float jumpForce = 620.0f;   // ジャンプ力
     public float walkForce = 15.0f;   // 歩き
-    public float speed = 15.0f;
+    public float speed = 5.0f;
     private float playerSpeed;
 
     // Start is called before the first frame update
