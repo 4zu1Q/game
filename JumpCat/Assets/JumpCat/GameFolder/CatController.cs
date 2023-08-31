@@ -5,21 +5,22 @@ using UnityEngine;
 
 public class CatController : MonoBehaviour
 {
+    AudioSource audioSource;
+    Animator animator;
+    Rigidbody2D rigid2D;
     public AudioClip jumpSe;
     public AudioClip workSe;
-    AudioSource audioSource;
 
-    Rigidbody2D rigid2D;
     int jumpCount = 0;          // ジャンプ回数
     float jumpForce = 620.0f;   // ジャンプ力
-
-    float walkForce = 15.0f;   // 歩き
+    public float walkForce = 15.0f;   // 歩き
     
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         this.rigid2D = GetComponent<Rigidbody2D>();
+        this.animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,7 +36,18 @@ public class CatController : MonoBehaviour
             //audioSource.PlayOneShot(jumpSe);
         }
 
-        // 左右移動
+        //Vector2 position = transform.position;
+
+        //if(Input.GetKey(KeyCode.D))
+        //{
+        //    position.x += walkSpeed;
+        //}
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    position.x -= walkSpeed;
+        //}
+
+        //左右移動
         int key = 0;
         if (Input.GetKey(KeyCode.D))
         {
@@ -58,11 +70,12 @@ public class CatController : MonoBehaviour
             this.rigid2D.AddForce(transform.right * key);
         }
 
-        // 動く方向に応じて反転
+        //動く方向に応じて反転
         if (key != 0)
         {
             transform.localScale = new Vector3(key, 1, 1);
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other)

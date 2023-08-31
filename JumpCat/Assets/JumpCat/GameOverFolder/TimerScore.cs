@@ -12,7 +12,7 @@ public class TimerScore : MonoBehaviour
     {
         ScoreText = GetComponentInChildren<Text>();
 
-        ScoreText.text = "‹L˜^..." + Timer.minute.ToString("00") + ":" + ((int)Timer.seconds).ToString("00");
+        ScoreText.text = Timer.minute.ToString("00") + ":" + ((int)Timer.seconds).ToString("00");
     }
 
     // Update is called once per frame

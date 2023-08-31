@@ -10,6 +10,9 @@ public class ItmeController : MonoBehaviour
     public GameObject EnemyR;
     [SerializeField]
     public GameObject EnemyL;
+    public static int itemCount;
+    [SerializeField]
+    public float countTime;
 
     //float effectTime = 15.0f;
     //float delta = 0;
@@ -20,6 +23,8 @@ public class ItmeController : MonoBehaviour
         this.Player = GameObject.Find("Player");
         this.EnemyL = GameObject.Find("EnemyLeft");
         this.EnemyR = GameObject.Find("EnemyRight");
+        itemCount = 0;
+        countTime = 0.0f;
     }
 
     // Update is called once per frame
@@ -34,12 +39,22 @@ public class ItmeController : MonoBehaviour
         Vector2 dir = p1 - p2;
         float d = dir.magnitude;
         float r1 = 0.5f;    // アイテムの半径
-        float r2 = 0.4f;    // プレイヤーの半径
+        float r2 = 0.9f;    // プレイヤーの半径
 
         if (d < r1 + r2)
         {
             // 衝突した場合はアイテムを消す
             Destroy(gameObject);
+            itemCount = 1;
+            Debug.Log(countTime);
+
+            // 五秒後効果が切れる
+            if (countTime == 5.0f)
+            {
+                itemCount = 0;
+                Debug.Log(itemCount);
+            }
+
 
             //delta += Time.deltaTime;
 

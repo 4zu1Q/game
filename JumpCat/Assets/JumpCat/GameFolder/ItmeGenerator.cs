@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItmeGenerator : MonoBehaviour
 {
     public GameObject itmePrefab;
-    float span = 15.0f;
+    float span = 5.0f;
     float delta = 0;
 
     // Start is called before the first frame update

@@ -16,9 +16,17 @@ public class EnemyControllerRight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         // フレームごとに等速で通過させる
-        transform.Translate(-0.01f, 0, 0);
+
+        if(ItmeController.itemCount == 0)
+        {
+            transform.Translate(-0.01f, 0, 0);
+        }
+        else
+        {
+            transform.Translate(-0.001f, 0, 0);
+        }
+
 
         // 画面外に出たらオブジェクトを破壊する
         if (transform.position.x < -12.0f)

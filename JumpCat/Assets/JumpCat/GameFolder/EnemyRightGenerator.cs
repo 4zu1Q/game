@@ -18,14 +18,22 @@ public class EnemyRightGenerator : MonoBehaviour
     void Update()
     {
         this.delta += Time.deltaTime;
+
+        if (ItmeController.itemCount == 0)
+        {
+            span = 1.0f;
+        }
+        else
+        {
+            span = 5.0f;
+        }
+
         if (this.delta > this.span)
         {
             this.delta = 0;
-
             GameObject go = Instantiate(enemyRightPrefab) as GameObject;
             float py = Random.Range(-3.5f, 0.0f);
             go.transform.position = new Vector3(12, py, 0);
-
         }
     }
 }
