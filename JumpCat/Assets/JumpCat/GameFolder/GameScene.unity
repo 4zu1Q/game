@@ -946,7 +946,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSe: {fileID: 0}
   workSe: {fileID: 0}
+  renderer: {fileID: 0}
   walkForce: 15
+  speed: 5
 --- !u!212 &954818482
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1062,10 +1064,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1694,7 +1696,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d89687df3697b1e408bcac5831ef323b, type: 3}
     m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
@@ -1783,7 +1785,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSe: {fileID: 8300000, guid: b78a09119d143a040b1655080b040185, type: 3}
   workSe: {fileID: 8300000, guid: 4cc9a5c476e7d574f9373ed0390e71b8, type: 3}
+  renderer: {fileID: 0}
   walkForce: 15
+  speed: 5
 --- !u!212 &2013295138
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1870,7 +1874,7 @@ CircleCollider2D:
   m_Radius: 0.6
 --- !u!95 &2013295141
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1887,8 +1891,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2023906398
 GameObject:
   m_ObjectHideFlags: 0
